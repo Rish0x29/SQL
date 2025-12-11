@@ -1,0 +1,12 @@
+SELECT * FROM Customers AS c INNER JOIN Prouducts p
+ON c.Customer_Id= p.Customer_ID
+
+
+SELECT Job_Title, COUNT(Job_Title) FROM EmployeeDemo AS Ed
+JOIN EmployeeSalary Es ON Ed.Employee_ID= Es.Employee_Id
+GROUP BY(Job_Title)
+HAVING COUNT(Job_Title)>1;
+
+
+SELECT *, RANK ()OVER(PARTITION BY Jobtitle ORDER BY Salary DESC) AS SalaryRank FROM Salary
+ORDER BY JobTitle, SalaryrRank
