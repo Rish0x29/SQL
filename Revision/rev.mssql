@@ -1,0 +1,52 @@
+SELECT DISTINCT #Returns only the different values 
+
+
+SELECT COUNT(Col)
+SELECT MIN(product_Price) AS Lowest
+SELECT SUM(product_Price) AS Sum
+SELECT COUNT(DISTINCT Countries) #If 3 times India then 3
+LIMIT 10,000 OFFSET 5,000 #Returns the first 10k values will offset the first 5k 
+
+
+SELECT * FROM Products_1
+#WHERE Condition BETWEEN/IN/LIKE
+WHERE Price_1 BETWEEN 10 AND 20
+WHERE Price_1 IN (10,20,30)
+WHERE Customer_Name LIKE "___"  #Returns 3 character
+WHERE Customer_Name LIKE "__S%"  #Returns 2 characters then s in middle then anything
+WHERE Country= 'Germany' AND City ='Berlin' #For 2 or more conditions
+WHERE Country= 'Germany' OR Country ='Singapore' 
+WHERE NOT Country= "India" #Not Condition
+WHERE Price_1 IS NULL
+WHERE Price_1 IS NOT NULL AND 
+
+
+
+SELECT CONCAT(First_name, Surname)
+SELECT CONCAT(UPPER(First_name), ',' , LOWER(Last_name)) AS Fullname #Concating
+SELECT LEN(First_name)>6
+SELECT DIFFERENCE(X,Y)
+SELECT REVERSE(First_name)
+SELECT * FROM Products
+WHERE Price>(SELECT AVG(Price)FROM Proucts); #Avg to be used only with Select clause
+
+
+
+
+UPDATE table_name 
+SET product_Price = '25'
+WHERE product_Price IS NULL  #If where not mentioned entire table will get updated 
+WHERE Customer_name = "Rishit Das";
+
+
+SELECT Column_1, Coulumn_2 FROM Table_1 AS Alias
+WHERE Condition > 10
+GROUP BY COUNT(Column_2) 
+ORDER BY COUNT(*)/MAX()/MIN()/SUM()/AVG() ASC/DESC #Ascending by default
+HAVING Condition;
+
+
+
+INSERT INTO Table_Name (X,Y,Z) 
+VALUES(1,2,3)
+
